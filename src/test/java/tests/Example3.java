@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 import org.openqa.selenium.remote.service.DriverService;
 import org.testng.annotations.*;
 
@@ -18,7 +19,7 @@ public class Example3 {
     WebDriver driver;
     DriverService ds;
     ChromeOptions chromeOptions;
-    boolean gridEnabled = false;
+    boolean gridEnabled = true;
     String urlServer = "http://192.168.1.2:4444/wd/hub";
 
     @BeforeTest
@@ -43,11 +44,13 @@ public class Example3 {
     }
 
     @Test
-    public void mainTest1() {
+    public void mainTest1() throws InterruptedException {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).sendKeys("automation basics");
         System.out.println(driver.getTitle());
         System.out.println("Total Links : " + driver.findElements(By.tagName("a")).size());
+        System.out.println(((RemoteWebDriver)driver).getSessionId());
+        Thread.sleep(178000);
     }
 
     @Test

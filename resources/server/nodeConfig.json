@@ -5,6 +5,12 @@
       "maxInstances": 1,
       "platform": "WINDOWS",
       "webdriver.chrome.driver": "chromedriver.exe"
+    },
+    {
+      "browserName": "firefox",
+      "maxInstances": 2,
+      "platform": "WINDOWS",
+      "webdriver.chrome.driver": "geckodriver.exe"
     }
   ]
 }

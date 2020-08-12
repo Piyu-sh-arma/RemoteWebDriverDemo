@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Default Suite" parallel="methods" thread-count="2">
+    <test name="RemoteWebDriverDemo">
+        <classes>
+            <class name="tests.Example4"/>
+        </classes>
+    </test> <!-- RemoteWebDriverDemo -->
+</suite> <!-- Default Suite -->
